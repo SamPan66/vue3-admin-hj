@@ -64,6 +64,8 @@
 </template>
 
 <script lang="ts">
+import { useRouter } from 'vue-router'
+const router = useRouter()
 export default {
   data() {
     return {
@@ -72,7 +74,7 @@ export default {
   },
   methods: {
     onSubmit() {
-      this.$router.push('/home/hello')
+      router.push('/home/hello')
     }
   }
 }
