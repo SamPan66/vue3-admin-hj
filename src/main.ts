@@ -26,10 +26,10 @@ const windowSizeChange = (): void => {
     winHeight = document.documentElement.clientHeight;
     winWidth = document.documentElement.clientWidth;
   }
-  console.log(winWidth,winHeight);
+  console.log(winWidth, winHeight);
   let appBox = document.getElementById("app");
-  console.log(appBox)
-  appBox.style.height = winHeight +"px";
+  console.log(appBox);
+  appBox.style.height = winHeight + "px";
 };
 windowSizeChange();
 window.addEventListener("resize", windowSizeChange, false);
