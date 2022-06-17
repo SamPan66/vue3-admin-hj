@@ -27,8 +27,8 @@ const windowSizeChange = (): void => {
     winWidth = document.documentElement.clientWidth;
   }
   console.log(winWidth, winHeight);
-  let appBox = document.getElementById("app");
-  console.log(appBox);
+  let appBox:HTMLElement = document.getElementById("app")!;
+  //console.log(appBox);
   appBox.style.height = winHeight + "px";
 };
 windowSizeChange();
