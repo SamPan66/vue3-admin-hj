@@ -19,19 +19,21 @@ import { defineComponent } from 'vue'
 import Account from '@/components/login/account.vue';
 import Qrcode from '@/components/login/qrcode.vue';
 import { useRouter } from 'vue-router'
-const _router = useRouter();
+
 export default defineComponent({
     components: { Account, Qrcode },
-    data() {
-        return {
-            tabsActiveName: 'account',
-            accountLable: "账号密码登录",
-            qrcodeLable: "二维码登录"
-        }
-    },
-    methods: {
-        onSubmit() {
+    setup() {
+        const tabsActiveName = 'account';
+        const accountLable = "账号密码登录";
+        const qrcodeLable = "二维码登录";
+        const _router = useRouter();
+        const onSubmit = () => {
             _router.push('/home')
+        };
+        return {
+            tabsActiveName,
+            accountLable,
+            qrcodeLable
         }
     }
 })
@@ -46,8 +48,9 @@ export default defineComponent({
     background-size: cover;
 
     .login-main {
-        width: 400px;
+        width: 320px;
         height: 300px;
+        padding: 0 40px;
         position: absolute;
         margin: 0 auto 0 -200px;
         top: 20%;

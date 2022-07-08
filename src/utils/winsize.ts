@@ -16,8 +16,6 @@ export function windowSizeChange(): void {
       winHeight = document.documentElement.clientHeight;
       winWidth = document.documentElement.clientWidth;
     }
-    console.log(winWidth, winHeight);
     let appBox:HTMLElement = document.getElementById("app")!;
-    //console.log(appBox);
     appBox.style.height = winHeight + "px";
   };

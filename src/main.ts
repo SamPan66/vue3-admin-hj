@@ -7,7 +7,7 @@ import router from "@/router/index";
 import { windowSizeChange } from "@/utils/winsize";
 
 const app = createApp(App);
-console.log(app.config)
+//console.log(app.config)
 app.use(router).use(ElementPlus).mount("#app");
 
 windowSizeChange();
